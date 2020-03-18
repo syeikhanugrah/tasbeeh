@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import { StyleSheet, View, Text, Button } from 'react-native';
 
-class App extends Component {
+class MainScreen extends Component {
   state = {
     count: 0,
   };
@@ -28,4 +28,4 @@ const styles = StyleSheet.create({
   },
 });
 
-export default App;
+export default MainScreen;
