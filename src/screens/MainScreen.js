@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import { StyleSheet } from 'react-native';
-import { Button, Text, Surface } from 'react-native-paper';
+import { Button, Title, Surface } from 'react-native-paper';
 
 class MainScreen extends Component {
   state = {
@@ -14,8 +14,8 @@ class MainScreen extends Component {
   render() {
     return (
       <Surface style={styles.view}>
-        <Text>{this.state.count}</Text>
-        <Button icon="camera" mode="contained" onPress={this._increment}>
+        <Title>{this.state.count}</Title>
+        <Button mode="contained" onPress={this._increment}>
           Count up
         </Button>
       </Surface>
