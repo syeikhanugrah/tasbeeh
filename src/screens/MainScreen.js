@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import { StyleSheet } from 'react-native';
-import { Button, Title, Surface } from 'react-native-paper';
+import { Surface, Text, TouchableRipple } from 'react-native-paper';
 
 class MainScreen extends Component {
   state = {
@@ -14,10 +14,11 @@ class MainScreen extends Component {
   render() {
     return (
       <Surface style={styles.view}>
-        <Title>{this.state.count}</Title>
-        <Button mode="contained" onPress={this._increment}>
-          Count up
-        </Button>
+        <TouchableRipple
+          style={styles.touchableCounterTasbeeh}
+          onPress={this._increment}>
+          <Text style={styles.textCounterTasbeeh}>{this.state.count}</Text>
+        </TouchableRipple>
       </Surface>
     );
   }
@@ -28,6 +29,9 @@ const styles = StyleSheet.create({
     flex: 1,
     justifyContent: 'center',
     alignItems: 'center',
+  },
+  textCounterTasbeeh: {
+    fontSize: 72,
   },
 });
 
